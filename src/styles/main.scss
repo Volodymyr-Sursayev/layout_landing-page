@@ -319,6 +319,7 @@ body {
   &__grid-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     // display: grid;
     // grid-template-columns: repeat(3, 1fr);
@@ -354,6 +355,10 @@ body {
       width: $image-dimension;
     }
 
+  }
+  &__img:hover {
+    transform: scale(1.2);
+    transition: transform 0.15s ease;
   }
 
   &__title {
@@ -441,7 +446,10 @@ body {
   }
 
   &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;
 
     @media screen and (min-width: 744px) {
       gap: 24px;
@@ -477,6 +485,10 @@ body {
       height: 324px;
 
     }
+  }
+  &__img:hover {
+    transform: scale(1.2);
+    transition: transform 0.15s ease;
   }
 }
 
@@ -742,6 +754,11 @@ body {
   flex-flow: column wrap;
 
   &__input {
+    font-family: Manrope, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    padding-left: 16px;
     color: $grey-2;
     border-radius: 8px;
     border: none;
@@ -765,6 +782,7 @@ body {
   &__textarea {
     height: 148px;
     margin-bottom: 32px;
+    resize: none;
   }
 
   &__send {
@@ -841,7 +859,7 @@ body {
     line-height: 140%;
     padding-bottom: 24px;
 
-    &-address {
+    &-address, &-email, &-phone {
       text-decoration: none;
       color: #191919;
     }

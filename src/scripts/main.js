@@ -25,9 +25,14 @@ burger.addEventListener('mouseleave', (event) => {
 const phoneNumber = document.querySelector('.header__phone-number');
 const phoneIcon = document.querySelector('.header__phone');
 
-phoneIcon.addEventListener('click', (event) => {
-  phoneNumber.classList.toggle('header__phone-active');
-  phoneNumber.classList.toggle('header__phone-inactive');
+phoneIcon.addEventListener('mouseenter', (event) => {
+  phoneNumber.classList.add('header__phone-active');
+  phoneNumber.classList.remove('header__phone-inactive');
+});
+
+phoneIcon.addEventListener('mouseleave', (event) => {
+  phoneNumber.classList.remove('header__phone-active');
+  phoneNumber.classList.add('header__phone-inactive');
 });
 
 const menuClose = document.querySelector('.menu__close');
